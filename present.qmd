@@ -10,7 +10,7 @@ library(tidyverse)
 
 LANDFIRE's [Existing Vegetation Type, Cover and Height](https://landfire.gov/vegetation.php){target="blank"} datasets describe vegetation conditions. 
 
-* Existing Vegetation Type (EVT) - represents the current distribution of the terrestrial ecological systems classification, developed by NatureServe for the western hemisphere, through 2016
+* Existing Vegetation Type (EVT) - represents the current distribution of the terrestrial ecological systems classification, developed by NatureServe for the western hemisphere, through 2022
 * Existing Vegetation Cover (EVC) - represents the vertically projected percent cover of the live canopy layer for a 30-m cell
 * Existing Vegetation Height (EVH) - represents the average height of the dominant vegetation for a 30-m cell
 
@@ -19,11 +19,13 @@ LANDFIRE's [Existing Vegetation Type, Cover and Height](https://landfire.gov/veg
 
 ## Summary
 
-* The Colorado Plateau Pinyon-Juniper Woodland is the most dominant ecosystem covering almost 23% of the subregion. The "shrubland" version of this type covers ~7% of the area. 
-* Shrub are by far the most dominant; relatively low canopy cover dominates as well.
-* Trees make up a small amount of the vegetation in this subregion.  
+* As expected, much of the area to the south of the 8-states is agriculture.
+* Of the remaining non-converted area, most was mapped as Northern Hardwoods (two types lumped in map, one with hemlock, one without), and Alkaline-Conifer Hardwood Swamp (seems like some of that should be peatland).
+* Some of the area still has oak types mapped.  I assume many of those areas are converting to mesophytic species.
 
 ## Most Prevalent Existing Vegetation Types
+
+Map simplified for clarity.  There are many many EVTs mapped in this region. For example, multiple agricultural types were lumped together as one type.
 
 <br>
 
@@ -32,6 +34,8 @@ LANDFIRE's [Existing Vegetation Type, Cover and Height](https://landfire.gov/veg
 <br>
 
 ## Most Prevalent Existing Vegetation Types
+
+Only the top 10 EVTs were used in the chart, with no lumping of types.  
 
 ```{r evt chart, echo=FALSE, message=FALSE, warning=FALSE, fig.width=10, fig.height=10}
 evtname <- read.csv(file = "data/evt_atts_r.csv") %>%
@@ -47,7 +51,7 @@ evtChart <-
   geom_bar(stat = "identity") +
   labs(
     title = "Top 10 Existing Vegetation Types",
-    caption = "Data from landfire.gov; Chart © Rhayna Lillie",
+    caption = "Data from landfire.gov",
     x = "",
     y = "percent of landscape") +
   scale_x_discrete(limits = rev(evtname$EVT_NAME),
@@ -66,7 +70,7 @@ evtChart
 ## Existing Vegetation Cover
 The Existing Vegetation Cover (EVC) map is a visual representation of EVC classifications across the subregion. The chart below the map provides a breakdown of each vegetation cover classification and their relative dominance across the subregion
 
-From this information, we can see that the majority of this subregion is classified as “shrub,” comprising approximately 50% of the vegetation cover.
+
 
 
 ![](images/evc_map.jpg){width=100%}
@@ -152,7 +156,7 @@ evcChart <-
   geom_bar(stat = "identity") +
   labs(
     title = "Existing Vegetation Cover",
-    caption = "Data from landfire.gov; Chart © Rhayna Lillie",
+    caption = "Data from landfire.gov",
     x = "amount of landscape",
     y = "most dominant lifeform") +
   scale_fill_identity() +
@@ -169,9 +173,8 @@ evcChart
 <br>
 
 ## Existing Vegetation Height
-The Existing Vegetation Height (EVH) map showcases EVH across the subregion. The chart below the map provides the percentage of the landscape represented by each EVH height.
+The Existing Vegetation Height (EVH) map showcases EVH across the area. The chart below the map provides the percentage of the landscape represented by each EVH height group.
 
-From these results, most trees are between 1 - 15m tall and most shrubs are between 0.2 - 0.5m tall.
 
 ![](images/evh_map.jpg){width=100%}
 <br>
@@ -247,7 +250,7 @@ ggplot(data = evhgroup, aes(x = label, y = REL_PERCENT, fill = colors)) +
   geom_bar(stat = "identity") +
   labs(
     title = "Existing Vegetation Height",
-    caption = "Data from landfire.gov; Chart © Rhayna Lillie",
+    caption = "Data from landfire.gov",
     x = "",
     y = "percent of landscape") +
   scale_fill_identity() +

@@ -125,8 +125,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#most-prevalent-biophysical-settings" id="toc-most-prevalent-biophysical-settings" class="nav-link" data-scroll-target="#most-prevalent-biophysical-settings">Most Prevalent Biophysical Settings</a></li>
   <li><a href="#historic-annual-acres-burned-per-ecosystem" id="toc-historic-annual-acres-burned-per-ecosystem" class="nav-link" data-scroll-target="#historic-annual-acres-burned-per-ecosystem">Historic Annual Acres Burned (per ecosystem)</a></li>
-  <li><a href="#top-historical-fire-regimes" id="toc-top-historical-fire-regimes" class="nav-link" data-scroll-target="#top-historical-fire-regimes">Top Historical Fire Regimes</a></li>
-  <li><a href="#historical-disturbances-per-ecosystem" id="toc-historical-disturbances-per-ecosystem" class="nav-link" data-scroll-target="#historical-disturbances-per-ecosystem">Historical Disturbances (per ecosystem)</a></li>
   <li><a href="#data-table" id="toc-data-table" class="nav-link" data-scroll-target="#data-table">Data Table</a></li>
   </ul>
 </nav>
@@ -158,20 +156,20 @@ ul.task-list li input[type="checkbox"] {
 <p><em>BpS models represent the vegetation system that may have been dominant on the landscape prior to Euro-American settlement. These models are based on a combination of the current environment and an approximation of the historical disturbance regime.</em> <a href="https://landfire.gov/bps.php" target="blank">Read more</a>.</p>
 </blockquote>
 <p>Check out this 3-minute tutorial for a quick refresher on the <a href="https://youtu.be/xjaWJCe7udQ" target="blank">basics of Biophysical Settings Models</a>.</p>
-<p>Use this page as a starting point to explore the most prevalent BpSs in the SRFSN Colorado Plateau Subregion. In addition to the charts and maps, the historical disturbance data can be directly accessed using this site.</p>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">Summary</h2>
 <ul>
-<li>Prior to European colonization, the most dominant vegetation system for the Wyoming Sagebrush Subregion was <a href="https://landfirereview.org/search.php?q=Colorado%20Plateau%20Pinyon-Juniper%20Woodland&amp;hPP=20&amp;idx=lf_landfire_dev&amp;p=0&amp;is_v=1" target="blank">Colorado Plateau Pinyon-Juniper Woodland</a>.</li>
-<li>Historically, this system experienced ~58,000 acres of fire annually across the subregion historically.</li>
-<li>The Rocky Mountain Montane Riparian Systems had the most disturbance annually with substantial amounts of ‘wind/weather/stress’.</li>
+<li>When clipping by the entire 8-state area we get tons of prairie types that would be mostly abscent if I had clipped to GLRI boundary, or totally missing if I had filtered for only “Forest” types.</li>
+<li>As expected northern hardwoods types dominated in terms of forested BpSs.</li>
+<li>If non-forested types are removed, there will still be substantial fire-adapted BpSs in the GLRI boundary, such as the North-Central Interior Dry-Mesic Oak Forest and Woodland.</li>
 </ul>
-<p>Scroll down to explore the “historical disturbances per ecosystem” using the interactive web app.</p>
 </section>
 <section id="most-prevalent-biophysical-settings" class="level2">
 <h2 class="anchored" data-anchor-id="most-prevalent-biophysical-settings">Most Prevalent Biophysical Settings</h2>
+<p>Here I mapped only the BpSs that represented &gt; 3% of the entire area, and did not filter by forested types. While not perfect colors were selected for accessibility. The map will be improved by reducing the number of types represented and/or splitting the map into multiple, e.g., ‘riparian’ and ‘upland’.</p>
 <p><img src="images/bps_map.jpg" class="img-fluid" style="width:100.0%"> <br></p>
+<p>In the chart below the top 10 BpSs are shown, again including all types (i.e., not filtered for forested).</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="past_files/figure-html/bps chart-1.png" class="img-fluid" width="960"></p>
@@ -180,20 +178,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="historic-annual-acres-burned-per-ecosystem" class="level2">
 <h2 class="anchored" data-anchor-id="historic-annual-acres-burned-per-ecosystem">Historic Annual Acres Burned (per ecosystem)</h2>
+<p>The historical fire chart and map come from the Biophysical Settings spatial data, which has historical fire attributes imported from the BpS state and transition models.</p>
 <div class="cell">
 <div class="cell-output-display">
 <p><img src="past_files/figure-html/fire bar-1.png" class="img-fluid" width="960"></p>
 </div>
 </div>
 <p><br></p>
-</section>
-<section id="top-historical-fire-regimes" class="level2">
-<h2 class="anchored" data-anchor-id="top-historical-fire-regimes">Top Historical Fire Regimes</h2>
-<p><img src="images/mfri.jpg" class="img-fluid" style="width:100.0%"></p>
+<p><img src="images/mfri_map.jpg" class="img-fluid" style="width:100.0%"></p>
 <p><br></p>
-</section>
-<section id="historical-disturbances-per-ecosystem" class="level2">
-<h2 class="anchored" data-anchor-id="historical-disturbances-per-ecosystem">Historical Disturbances (per ecosystem)</h2>
 </section>
 <section id="data-table" class="level2">
 <h2 class="anchored" data-anchor-id="data-table">Data Table</h2>
