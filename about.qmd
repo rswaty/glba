@@ -1,7 +1,7 @@
 ---
 title: "About this Project"
 ---
-The data compiled for this Southern Rockies Fire Science Network "Subregion" is the result of a volunteer project that supports information dissemination and natural resource management decisions within the 5 subregions of the SRFSN. Why subregions? [Learn more here](https://www.southernrockiesfirescience.org/why-subregions/){target="blank"}.
+This is an initial exploration of LANDFIRE data for the Great Lakes Basin Assessment.  All maps and charts will likely change based on data needs, boundary outline decisions and use of different/additional attributes. 
 
 ## The Nature Conservancy & LANDFIRE
 
